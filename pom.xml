@@ -178,11 +178,6 @@
 		<repository>
 			<id>central</id>
 			<url>https://repo.maven.apache.org/maven2</url>
-			<releases>
-				<release>
-				<next>never</next>
-				</release>
-			</releases>
 		</repository>
 	</repositories>
 	<pluginRepositories>
