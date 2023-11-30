@@ -41,7 +41,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    bat 'docker build -t hargi77/rnd-springboot-3.0 .'
+                    bat 'C:\ProgramData\Jenkins\.jenkins\workspace\spring-boot'
+                    bat 'docker build -t hargi77/rnd-springboot-3.0'
                     echo 'Build Docker Image Completed'
                 }
             }
