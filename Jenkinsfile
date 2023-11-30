@@ -1,9 +1,7 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.9.0'
-            args '-v /root/.m2:/root/.m2'
-        }
+    agent any
+    tools {
+        maven 'jenkins-maven-4.0.0'
     }
 
     environment {
