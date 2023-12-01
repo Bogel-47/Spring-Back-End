@@ -41,7 +41,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    bat 'docker build -t hargi77/springboot.'
+                    bat 'docker build -t hargi77/springboot .'
                     echo 'Build Docker Image Completed'
                 }
             }
