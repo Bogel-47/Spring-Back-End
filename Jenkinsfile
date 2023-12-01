@@ -41,7 +41,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    bat 'docker build -t hargi77/rnd-springboot-3.0 .'
+                    bat 'docker build -t hargi77/springboot.'
                     echo 'Build Docker Image Completed'
                 }
             }
@@ -53,7 +53,7 @@ pipeline {
                     withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhub-password')]) {
                         bat ''' docker login -u hargi77 -p "%dockerhub-password%" '''
                     }
-                    bat 'docker push hargi77/rnd-springboot-3.0'
+                    bat 'docker push hargi77/springboot'
                 }
             }
         }
@@ -61,7 +61,7 @@ pipeline {
         stage ('Docker Run') {
             steps {
                 script {
-                    bat 'docker run -d --name rnd-springboot-3.0 -p 8099:8080 hargi77/rnd-springboot-3.0'
+                    bat 'docker run -d --name springboot -p 8099:8080 hargi77springboot'
                     echo 'Docker Run Completed'
                 }
             }
