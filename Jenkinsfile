@@ -61,7 +61,7 @@ pipeline {
         stage ('Docker Run') {
             steps {
                 script {
-                    bat 'docker run -d --name springboot -p 8099:8080 hargi77springboot'
+                    bat 'docker run -d --name springboot -p 8099:8080 hargi77/springboot'
                     echo 'Docker Run Completed'
                 }
             }
